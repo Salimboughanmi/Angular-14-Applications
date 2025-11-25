@@ -1,0 +1,10 @@
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 50px;
+  background-color: azure;
+}
+.navbar_menu a {
+padding: 0px 7px;
+}
