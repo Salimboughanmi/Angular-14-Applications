@@ -1,5 +1,18 @@
-<ul class="list-group">
-  <app-item></app-item>
-  <app-item></app-item>
-  <app-item></app-item>
-</ul>
+<ol class="list-group">
+  <app-item
+    [oneCandidat]="tabCandidat[0]"
+    (msgToList)="traitementDuList($event)"
+  ></app-item>
+  <app-item
+    [oneCandidat]="tabCandidat[1]"
+    (msgToList)="traitementDuList($event)"
+  ></app-item>
+  <app-item
+    [oneCandidat]="tabCandidat[2]"
+    (msgToList)="traitementDuList($event)"
+  ></app-item>
+  <app-item
+    [oneCandidat]="tabCandidat[3]"
+    (msgToList)="traitementDuList($event)"
+  ></app-item>
+</ol>

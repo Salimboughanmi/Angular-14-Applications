@@ -1,10 +1,13 @@
 <div class="container">
   <div class="row">
     <div class="col-md-5">
-      <app-liste></app-liste>
+      <app-liste
+        [tabCandidat]="listCandidats"
+        (msgToCv)="traitemetDuCv($event)"
+      ></app-liste>
     </div>
     <div class="col-md-7">
-      <app-details></app-details>
+      <app-details [selectedCandidat]="selectedCandidat"></app-details>
     </div>
   </div>
 </div>

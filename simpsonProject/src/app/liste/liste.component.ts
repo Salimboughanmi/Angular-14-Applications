@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Candidat } from '../Models/condidat';
 
 @Component({
   selector: 'app-liste',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./liste.component.css']
 })
 export class ListeComponent implements OnInit {
+@Input() tabCandidat = [];
+@Output() msgToCv = new EventEmitter();
 
-  constructor() { }
+
+constructor() { }
 
   ngOnInit(): void {
+  }
+  traitementDuList(cand : Candidat){
+   this.msgToCv.emit(cand);
   }
 
 }
