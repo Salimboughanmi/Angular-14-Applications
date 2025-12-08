@@ -1,0 +1,23 @@
+<div
+  [ngStyle]="{
+    backgroundColor: bg,
+    color: cl,
+    fontSize: sz,
+    fontFamily: font
+  }"
+  class="container m-2"
+>
+  application de NGsTYLE
+</div>
+<label for="">background color </label>
+<input [(ngModel)]="bg" type="text" class="form-control" />
+<label for="">text color </label>
+<input [(ngModel)]="cl" type="text" class="form-control" />
+<label for=""> font size </label>
+<input #inp (change)="changesize(inp.value)" type="text" class="form-control" />
+
+<label for="">police</label>
+<select [(ngModel)]="font" class="form-control">
+  <option value="phosphate">phosphate</option>
+  <option value="calibri">calibri</option>
+</select>

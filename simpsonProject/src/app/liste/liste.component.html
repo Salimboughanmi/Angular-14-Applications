@@ -1,9 +1,11 @@
 <ol class="list-group">
   <app-item
-    [oneCandidat]="tabCandidat[0]"
+    *ngFor="let candidat of tabCandidat"
     (msgToList)="traitementDuList($event)"
+    [oneCandidat]="candidat"
   ></app-item>
-  <app-item
+
+  <!--  <app-item
     [oneCandidat]="tabCandidat[1]"
     (msgToList)="traitementDuList($event)"
   ></app-item>
@@ -14,5 +16,5 @@
   <app-item
     [oneCandidat]="tabCandidat[3]"
     (msgToList)="traitementDuList($event)"
-  ></app-item>
+  ></app-item> -->
 </ol>

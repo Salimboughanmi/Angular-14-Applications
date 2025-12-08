@@ -7,7 +7,7 @@ import { Candidat } from '../Models/condidat';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit {
-@Input() selectedCandidat : Candidat;
+@Input() candidatSelected : Candidat;
 
   constructor() { }
 

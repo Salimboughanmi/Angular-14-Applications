@@ -9,6 +9,7 @@ import { CvComponent } from './cv/cv.component';
 import { ListeComponent } from './liste/liste.component';
 import { ItemComponent } from './item/item.component';
 import { DetailsComponent } from './details/details.component';
+import { MsWordComponent } from './ms-word/ms-word.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DetailsComponent } from './details/details.component';
     CvComponent,
     ListeComponent,
     ItemComponent,
-    DetailsComponent
+    DetailsComponent,
+    MsWordComponent
   ],
   imports: [
     BrowserModule,

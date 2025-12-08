@@ -1,4 +1,4 @@
-<div class="card-container">
+<div *ngIf="candidatSelected" class="card-container">
   <div class="card">
     <div class="front">
       <div class="cover">
@@ -7,17 +7,17 @@
       <div class="user">
         <img
           class="img-circle"
-          src="../../assets/{{ selectedCandidat.avatar }}"
+          src="../../assets/{{ candidatSelected.avatar }}"
         />
       </div>
       <div class="content">
         <div class="main">
           <h3 class="name">
-            {{ selectedCandidat.nom }} {{ selectedCandidat.prenom }}
+            {{ candidatSelected.nom }} {{ candidatSelected.prenom }}
           </h3>
-          <p class="profession">{{ selectedCandidat.profession }}</p>
+          <p class="profession">{{ candidatSelected.profession }}</p>
 
-          <p class="text-center">{{ selectedCandidat.age }} years old</p>
+          <p class="text-center">{{ candidatSelected.age }} years old</p>
         </div>
         <div class="footer">
           <div class="rating">
