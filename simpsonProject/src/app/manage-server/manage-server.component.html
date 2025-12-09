@@ -1,0 +1,23 @@
+<!-- <ol class="list-group">
+  <li class="list-group-item list-group-item-success">
+    This is a success list group item
+  </li>
+  <li class="list-group-item list-group-item-danger">
+    This is a danger list group item
+  </li>
+  <li class="list-group-item list-group-item-warning">
+    This is a warning list group item
+  </li>
+</ol> -->
+<div class="container">
+  <ol class="list-group">
+    <li
+      class="list-group-item"
+      *ngFor="let server of listServers"
+      [ngClass]="affecterClass(server.status)"
+    >
+      {{ server.nom }} | {{ server.type }} | {{ server.date_d }}
+      <span class="badge bg-secondary">{{ server.status }}</span>
+    </li>
+  </ol>
+</div>

@@ -10,6 +10,9 @@ import { ListeComponent } from './liste/liste.component';
 import { ItemComponent } from './item/item.component';
 import { DetailsComponent } from './details/details.component';
 import { MsWordComponent } from './ms-word/ms-word.component';
+import { DirectComponent } from './direct/direct.component';
+import { ManageServerComponent } from './manage-server/manage-server.component';
+import { CustomDirectiveDirective } from './custom-directive.directive';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { MsWordComponent } from './ms-word/ms-word.component';
     ListeComponent,
     ItemComponent,
     DetailsComponent,
-    MsWordComponent
+    MsWordComponent,
+    DirectComponent,
+    ManageServerComponent,
+    CustomDirectiveDirective
   ],
   imports: [
     BrowserModule,
