@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ManageServerComponent implements OnInit {
 
+
+
   listServers=[{
     nom : 'production server',
     type: 'small',
@@ -33,7 +35,7 @@ export class ManageServerComponent implements OnInit {
     }
 
 ]
-
+ SelectedStatus ="";
   constructor() { }
 
   ngOnInit(): void {
@@ -59,4 +61,9 @@ export class ManageServerComponent implements OnInit {
       return 'list-group-item-danger'
     }
   return ''} */
+
+
+ /*  myInput(inp){   methode 3
+    this.SelectedStatus=inp;
+  } */
 }

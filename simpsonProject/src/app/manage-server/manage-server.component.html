@@ -1,23 +1,35 @@
-<!-- <ol class="list-group">
-  <li class="list-group-item list-group-item-success">
-    This is a success list group item
-  </li>
-  <li class="list-group-item list-group-item-danger">
-    This is a danger list group item
-  </li>
-  <li class="list-group-item list-group-item-warning">
-    This is a warning list group item
-  </li>
-</ol> -->
 <div class="container">
+  <input
+    type="text"
+    class="form-control"
+    placeholder="Rechercher un serveur par son status"
+    [(ngModel)]="SelectedStatus"
+  />
+
+  <!-- <input                         //methode 2
+    #inp
+    (input)="SelectedStatus = inp.value"
+    type="text"
+    class="form-control"
+    placeholder="Rechercher un serveur par son status"
+  /> -->
+
+  <!-- <input   //methode 3
+    #inp
+    (change)="myInput(inp.value)"
+    type="text"
+    class="form-control"
+    placeholder="Rechercher un serveur par son status"
+  /> -->
   <ol class="list-group">
     <li
       class="list-group-item"
-      *ngFor="let server of listServers"
+      *ngFor="let server of listServers | filtre : SelectedStatus"
       [ngClass]="affecterClass(server.status)"
     >
-      {{ server.nom }} | {{ server.type }} | {{ server.date_d }}
-      <span class="badge bg-secondary">{{ server.status }}</span>
+      {{ server.nom | uppercase | short : 15 }} | {{ server.type }} |
+      {{ server.date_d | date : "fullTime" }}
+      <span class="badge bg-secondary">{{ server.status }} </span>
     </li>
   </ol>
 </div>
